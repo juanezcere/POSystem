@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" pageWidth="250" pageHeight="1000" whenNoDataType="NoDataSection" columnWidth="210" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" isIgnorePagination="true" uuid="db866cb9-f07e-4926-93a4-96af211b2dca">
+	<property name="ireport.zoom" value="1.464100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="336"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#D9C3C3">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<parameter name="Empresa" class="java.lang.String"/>
+	<parameter name="Nit" class="java.lang.String"/>
+	<parameter name="Direccion" class="java.lang.String"/>
+	<parameter name="Telefono" class="java.lang.String"/>
+	<parameter name="Ciudad" class="java.lang.String"/>
+	<parameter name="Factura" class="java.lang.String"/>
+	<parameter name="POS" class="java.lang.String"/>
+	<parameter name="Cajero" class="java.lang.String"/>
+	<parameter name="Tarjeta" class="java.lang.String"/>
+	<parameter name="Gracias" class="java.lang.String"/>
+	<parameter name="Neto" class="java.lang.String"/>
+	<parameter name="IVA" class="java.lang.String"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<parameter name="Pagado" class="java.lang.String"/>
+	<parameter name="Devuelta" class="java.lang.String"/>
+	<parameter name="Pago" class="java.lang.String"/>
+	<parameter name="Autorizacion" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Item" class="java.lang.String"/>
+	<field name="Descripcion" class="java.lang.String"/>
+	<field name="Valor" class="java.lang.String"/>
+	<field name="IVA" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="210" height="20" uuid="08713d36-2d6c-46a0-9656-6b1890dc3cf6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="20" width="210" height="20" uuid="ed43be90-57f0-41db-ac1f-b22bdb00bb2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="60" width="210" height="20" uuid="94bcdfe4-b1e2-4ace-baaf-e28ecf130a00"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="40" width="210" height="20" uuid="16fc2ac8-2ed4-4a87-b27c-da454c218493"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="80" width="210" height="20" uuid="d619ed8d-2a7b-4bf1-9fdf-a0ff4247007b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Ciudad}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="100" width="210" height="1" uuid="cde7ad8c-e5b2-49ec-9294-a929d893ca02"/>
+			</line>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="0" y="100" width="210" height="20" uuid="26a3c410-5321-46c9-9c80-a145049d10fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="123" width="210" height="1" uuid="db895400-1d54-4598-b52d-7bf067e66782"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="141" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="210" height="20" uuid="11029414-36e0-43dc-a1bb-f413406c6ff6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="210" height="20" uuid="795f78d2-ed09-4323-82b2-ce6bfc1a1f31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{POS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="210" height="20" uuid="3a163531-399b-4432-8ef8-96e5f41c3c12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Cajero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="103" width="210" height="36" uuid="89a2aa97-8e9a-4424-a043-865aa552717d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Gracias}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="210" height="31" uuid="22db4275-5399-4b51-86e0-32f6b4cddd1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Tarjeta}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="139" width="210" height="1" uuid="19909333-4afc-46df-a237-e7efaa26abf9"/>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="156" y="0" width="32" height="20" uuid="6243761b-9689-492c-b6b2-0258f92c2f51"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="156" height="20" uuid="842c24c6-71e8-4f18-b69e-f2e4b5bd49c0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="0" width="22" height="20" uuid="6a60743d-8a66-4bb4-8b52-e825324eae8f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IVA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="175" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="41" width="210" height="20" uuid="34106188-1624-4ce6-8ed1-3d78270c3ead"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="61" width="210" height="20" uuid="1d0d96b5-82b5-40e8-8084-bdf731420401"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Pagado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="81" width="210" height="20" uuid="048bcfa6-36ea-479d-9eb1-07711a855008"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Devuelta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="101" width="210" height="20" uuid="76559a5e-d7c1-4eb2-a26b-1dc7e7cac361"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Pago}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="122" width="210" height="51" uuid="d89b57be-f355-408c-b472-1ba49f6fc015"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Autorizacion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="121" width="210" height="1" uuid="d5ff0bee-1b0a-4d06-8355-60785bf0f051"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="210" height="1" uuid="f41b230e-a7fd-4402-9d92-d14b0a61cdcb"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="1" width="210" height="20" uuid="f69d20c6-7693-4058-866b-679f0d597413"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IVA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="21" width="210" height="20" uuid="63473860-0492-46af-bc42-30a40fd7dee7"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Neto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
